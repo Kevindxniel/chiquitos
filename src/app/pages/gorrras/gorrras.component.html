@@ -1,0 +1,16 @@
+<div class="container-fluid text-center">
+  <h1 class="palabraPro">TODOS LOS PRODUCTOS</h1>
+  <hr style="border-color: #444; margin: 30px 0;">
+  <br><br><br>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <div *ngFor="let gorra of gorras" class="col">
+      <div class="card" style="background-color: black; color: aliceblue; cursor: pointer;" (click)="onClickGorra(gorra)">
+        <img [src]="gorra.imageUrl" class="card-img-top img-fluid rounded tarjeta" [alt]="gorra.nombre">
+        <div class="card-body">
+          <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace; font-weight: 200; color: rgb(200, 200, 200);">{{gorra.nombre}}</h5>
+          <h6 style="font-weight: 800; font-size: 20px;">${{gorra.precio}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

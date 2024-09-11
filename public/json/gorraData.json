@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "-BOSTON-",
+        "descripcion": "Cerrada New Era",
+        "imagen": "imagenes/gorraVentaUno.png",
+        "precio": 52
+    },
+    {
+        "id": 2,
+        "nombre": "LOS ANGELES",
+        "descripcion": "Ajustable New Era Collection",
+        "imagen": "imagenes/gorraVentaDos.png",
+        "precio": 60
+    },
+    {
+        "id": 3,
+        "nombre": "-CHICAGO-",
+        "descripcion": "Cerrada New Era",
+        "imagen": "imagenes/gorraVentaTres.png",
+        "precio": 55
+    },
+    {
+        "id": 4,
+        "nombre": "-BOSTON-",
+        "descripcion": "Cerrada New Era",
+        "imagen": "imagenes/gorraVentaCuatro.png",
+        "precio": 49
+    }
+]

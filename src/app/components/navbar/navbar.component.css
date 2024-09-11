@@ -1,0 +1,16 @@
+.iconosNaaa{
+    width: 40px;
+}
+.imagenIcono{
+    width: 25%; margin-right: 8px;
+}
+@media (max-width: 990px){
+    .imagenIcono{
+        width: 5%; margin-right: 8px;
+    }
+}
+@media (max-width: 500px){
+    .imagenIcono{
+        width: 10%;margin-right: 50px;
+    }
+} 

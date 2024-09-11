@@ -1,0 +1,24 @@
+<div class="connn">
+<div class="con " >
+    <div class="wrapper">
+        <h2>Iniciar Sesión</h2>
+        <form [formGroup]="form">
+            <div class="input-field">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <div class="invalid-feedback">Campo obligatorio</div>
+            </div>
+
+            <div class="input-field">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <div class="invalid-feedback">Campo obligatorio</div>
+            </div>
+            <!-- Funciona pero me falto tiempo para crear un screen de registro -->
+            <button class="btn-black-white" type="button" (click)="onClickRegister()">Iniciar Sesión</button>
+            <button class="btn-black-white" type="button" (click)="onClickLoginWithGoogle()">Iniciar Sesión con Google</button>
+        </form>
+        <a href="#" class="Register">¿No tienes cuenta? Regístrate</a>
+    </div> 
+</div>
+</div>

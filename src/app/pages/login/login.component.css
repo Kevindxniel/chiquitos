@@ -1,0 +1,83 @@
+.con {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+.connn{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.invalid-feedback {
+    font-size: 12px;
+    color: #d9534f;
+    display: none; /* Hidden by default, show when there's an error */
+}
+
+.btn-black-white {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.btn-black-white:hover {
+    background-color: #333;
+}
+
+.forgot, .Register {
+    display: block;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot:hover, .Register:hover {
+    text-decoration: underline;
+}

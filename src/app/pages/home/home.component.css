@@ -1,0 +1,60 @@
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Asegura que la imagen mantenga su proporción */
+  }
+  .fondo-oscuro {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.fondo-oscuro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.fondo-oscuro > * {
+    z-index: 1; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+
+
+
+.carousel-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.carousel-item img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+
+
+
+.card {
+  opacity: 0.6;
+}
+.card:hover {
+  opacity: 0.9; /* Reduce la opacidad para crear un efecto de resplandor */
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta ligeramente */
+}
+.card-img-top {
+  transition: transform 0.1s ease; /* Suaviza la transición del efecto en la imagen */
+}
+.card:hover .card-img-top {
+  transform: scale(1.07); /* Aumenta el tamaño de la imagen ligeramente en el hover */
+}
+.destacado{
+  color: aliceblue; font-family: 'Courier New', Courier, monospace; font-size: 47px; font-style: italic;
+}
+@media (max-width: 990px){
+    .destacado{
+        font-size: 30px;
+    }
+}

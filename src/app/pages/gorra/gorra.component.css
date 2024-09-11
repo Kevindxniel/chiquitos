@@ -1,0 +1,26 @@
+.containerS {
+    vertical-align: middle; 
+    color: aliceblue;
+
+} 
+.boton{
+    background-color: #000000; 
+    color: rgb(255, 255, 255); 
+    border: 2.5px solid #ffffff;
+    border-radius: 22px;
+    padding: 12px 24px; 
+    font-size: 14px;
+    text-decoration: none; 
+    cursor: pointer;  
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+.boton:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0); 
+    border: 2.5px solid #ffffff; 
+    transform: scale(1.05);
+}
+.coloLetras{
+    color: #ffffff;
+}

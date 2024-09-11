@@ -1,0 +1,130 @@
+<!-- Carrusel Responsive -->
+<div id="carouselExample" class="carousel slide" data-bs-interval="2000">
+    <div class="container-fluid px-0">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagenes/ofertaDos.png" class="d-block w-100" alt="gorra1">
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/ofertaTres.png" class="d-block w-100" alt="gorra2">
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/ofertaUno.png" class="d-block w-100" alt="gorra3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Sección de Apoyo de Empresas -->
+<div class="container mt-4">
+    <div class="row text-center align-items-center justify-content-center">
+        <div class="col-12 col-md-5 mb-2">
+            <p style="color: aliceblue; font-weight: 850">BAJO EL APOYO DE: </p>
+        </div>
+        <div class="col-4 col-md-2 mb-2 d-flex justify-content-center">
+            <img src="imagenes/empresaDos.png" alt="Logo Empresa Dos" style="width: 50px;">
+        </div>
+        <div class="col-4 col-md-2 mb-2 d-flex justify-content-center">
+            <img src="imagenes/nflLogo.png" alt="Logo NFL" style="width: 35px;">
+        </div>
+        <div class="col-4 col-md-3 d-flex justify-content-center">
+            <img src="imagenes/empresaTres.png" alt="Logo Empresa Tres" style="width: 75px;">
+        </div>
+    </div>
+    <br>
+</div>
+
+<!-- Carrusel con Fondo Oscuro -->
+<div class="fondo-oscuro" style="background-image: url(/imagenes/fondo.png); background-size: cover; background-repeat: no-repeat;">
+    <div class="container text-center py-5">
+        <h1 style="color: aliceblue;"></h1>
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div *ngFor="let gorra of gorras" [class]="gorra.id==1 ? 'carousel-item active' : 'carousel-item'">
+                    <img [src]="gorra.imagen" class="d-block w-100" [alt]="gorra.nombre">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Sección LO MÁS DESTACADO -->
+<div class="container text-center mt-4">
+    <h1  class="destacado">LO MÁS DESTACADO</h1>
+    <hr style="border-color: #444; margin: 30px 0;">
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaUno.png" class="card-img-top" alt="Imagen 1">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">WxB Edition Two Descuento -%10</h5>
+                    <p class="card-text">W merch X New Era</p>
+                    <h6>$ 67.44</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaTres.png" class="card-img-top" alt="Imagen 2">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">Estilo Urbano</h5>
+                    <p class="card-text">La Gorra Perfecta para Cada Ocasión</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaDos.png" class="card-img-top" alt="Imagen 3">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">Edición Limitada 2x1</h5>
+                    <p class="card-text">Las Gorras que Definen la Temporada</p>
+                    <h6>$ 50.0</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaCuatro.png" class="card-img-top" alt="Imagen 1">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">Tu Estilo, Tu Momento</h5>
+                    <p class="card-text">Eleva tu estilo con New Era. ¡Destaca con comodidad y actitud!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaCinco.png" class="card-img-top" alt="Imagen 2">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">Honor the Game</h5>
+                    <p class="card-text">Celebra el orgullo NFL con las gorras New Era. ¡Lleva tu equipo siempre contigo!</p>
+                    <h6>$ 30.30</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: black; color: aliceblue;">
+                <img src="imagenes/tarjetaSeis.png" class="card-img-top" alt="Imagen 3">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-family: 'Courier New', Courier, monospace;">Toque Moderno</h5>
+                    <p class="card-text">La Gorra Ideal para Todos los Momentos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
