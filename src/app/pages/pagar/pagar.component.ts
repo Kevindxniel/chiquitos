@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PaypalService } from '../../services/paypal/paypal.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CarritoService } from '../../services/carrito/carrito.service';
 import { Product } from '../../services/productos/productos.service';
 
@@ -10,24 +10,33 @@ import { Product } from '../../services/productos/productos.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pagar.component.html',
-  styleUrl: './pagar.component.css'
+  styleUrls: ['./pagar.component.css']
 })
-export class PagarComponent implements OnInit{
+export class PagarComponent implements OnInit {
   productos: Product[] = [];
   showMessage = false;
   message = '';
 
-  constructor(private carritoService: CarritoService,private paypalService: PaypalService, private route: ActivatedRoute) { }
+  constructor(
+    private carritoService: CarritoService,
+    private paypalService: PaypalService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
-  ngOnInito() {
-    this.route.queryParams
-      .subscribe(params => {
-        console.log(params['paymentId']);
-      });
-  }
   ngOnInit(): void {
     this.productos = this.carritoService.getProductos();
+
+    this.route.queryParams.subscribe(params => {
+      if (params['paymentId'] && params['PayerID']) {
+        this.finalizarPago(params['paymentId'], params['PayerID']);
+      } else if (params['cancelled']) {
+        this.showMessage = true;
+        this.message = 'Se ha cancelado la compra por el usuario.';
+      }
+    });
   }
+
   getTotal(): number {
     return this.carritoService.getTotal();
   }
@@ -41,15 +50,18 @@ export class PagarComponent implements OnInit{
               accessToken.access_token,
               webProfile.id,
               "http://localhost:4200/pagar",
-              "http://localhost:4200/login",
-            ).subscribe( payment => {
+              "http://localhost:4200/pagar?cancelled=true",
+            ).subscribe(payment => {
               console.log(payment.id);
               window.location.href = payment.links[1].href;
               this.showMessage = true;
-              this.message = 'Pago realizado con éxito!';
+              this.message = 'Proceso de pago iniciado. Por favor, espere...';
             })
           })
       })
   }
 
+  finalizarPago(paymentId: string, payerId: string): void {
+    this.router.navigate(['/compras']);
+  }
 }

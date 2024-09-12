@@ -1,20 +1,33 @@
-.tarjeta{
+.tarjeta { 
     box-shadow: 0px 5px 25px rgba(0,0,0,0.4);
     transition: all 0.3s ease;
     flex: 1 1 calc(33% - 20px);
 }
+
 .tarjeta:hover {
     box-shadow: 0px 2px 15px rgb(255, 255, 255);
     transform: translateY(-5px);
 }
+
+.tarjeta img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
 .table td {
     vertical-align: middle; 
 }
-.palabraPro{
-    font-size: 55px; font-weight: 900;color: rgb(152, 152, 152);
+
+.palabraPro {
+    font-size: 55px;
+    font-weight: 900;
+    color: rgb(152, 152, 152);
 }
+
 @media (max-width: 768px) {
-    .palabraPro{
+    .palabraPro {
         font-size: 30px;
     }
 }

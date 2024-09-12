@@ -8,7 +8,6 @@
   /* Estilo para el contenedor de la imagen del producto */
   .product-image-container {
     background-image: url('/imagenes/fondoProducto.png');
-    background-size: cover;
     background-position: center;
     padding: 20px;
     text-align: center;

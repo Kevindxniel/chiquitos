@@ -1,4 +1,3 @@
-// carrito.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../../services/carrito/carrito.service';
 import { Router } from '@angular/router';

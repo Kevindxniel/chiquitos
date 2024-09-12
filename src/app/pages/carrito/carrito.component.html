@@ -1,34 +1,33 @@
-<div class="container mt-5">
+<div class="container mt-5 carrito-compras">
   <h2>Carrito de Compras</h2>
+
   <div *ngIf="productos.length === 0">
     <p>El carrito está vacío.</p>
-    <button class="btn btn-dark" (click)="volverComprar()">Volver a Comprar</button>
+    <button class="btn btn-dark" (click)="volverComprar()">Volver a los productos</button>
   </div>
+
   <div *ngIf="productos.length > 0">
-    <div *ngFor="let producto of productos" class="card mb-3">
+    <div *ngFor="let producto of productos" class="card mb-3 producto-card">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img [src]="producto.imageUrl" class="card-img" [alt]="producto.nombre">
+          <img [src]="producto.imageUrl" class="card-img producto-img" [alt]="producto.nombre">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">{{producto.nombre}}</h5>
             <p class="card-text">$ {{producto.precio}}</p>
-            <button class="btn btn-danger" (click)="removeFromCarrito(producto)">Eliminar</button>
+            <button class="btn btn-danger btn-sm" (click)="removeFromCarrito(producto)">Eliminar</button>
           </div>
         </div>
       </div>
     </div>
-    <br>
-    <h3>Total: $ {{getTotal()}}</h3>
-    <br>
-    <div  class="button-group">
-     
-      <button class="btn btn-warning btn-custom" (click)="clearCarrito()">Vaciar Carrito</button>
-      <button class="btn btn-primary btn-custom" (click)="seguirComprando()">Seguir Comprando</button>
-      <!-- <button class="btn btn-danger" (click)="()">Seguir Comprando</button> -->
-      <button class="btn btn-success btn-custom" (click)="pagar()">Pagar</button>
 
+    <h3>Total: $ {{getTotal()}}</h3>
+
+    <div class="button-group mt-3">
+      <button class="btn btn-dark mx-2" (click)="clearCarrito()">Vaciar Carrito</button>
+      <button class="btn btn-dark mx-2" (click)="seguirComprando()">Seguir Comprando</button>
+      <button class="btn btn-dark mx-2" (click)="pagar()">Pagar</button>
     </div>
   </div>
 </div>

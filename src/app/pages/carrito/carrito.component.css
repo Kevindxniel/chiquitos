@@ -1,99 +1,58 @@
-/* carrito.component.css */
+.carrito-compras {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-.container {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .card {
-    background-color: #1a1a1a;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .card-img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card-body {
-    padding: 15px;
-  }
-  
-  .card-title {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    color: #cccccc;
-    font-size: 16px;
-  }
-  
-  .btn {
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .btn-danger {
-    background-color: #ff4d4d;
-    border-color: #ff4d4d;
-    color: #ffffff;
-  }
-  
-  .btn-danger:hover {
-    background-color: #e60000;
-    border-color: #e60000;
-  }
-  
-  .btn-warning {
-    background-color: #ffcc00;
-    border-color: #ffcc00;
-    color: #000000;
-  }
-  
-  .btn-warning:hover {
-    background-color: #e6b800;
-    border-color: #e6b800;
-  }
-.button-group {
+.carrito-compras h2 {
+  color: #ffff;
+  border-bottom: 1px solid #444444;
+  padding-bottom: 10px;
+}
+
+.producto-card {
+  background-color: #0f0d0d;
+  border: 1px solid #444444;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.producto-card:hover {
+  transform: scale(1.02);
+}
+
+.producto-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-body h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.button-group .btn-custom {
+  margin-right: 10px;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.carrito-compras h3 {
   display: flex;
-  gap: 1px; /* Espacio entre los botones */
+  justify-content: flex-end;
+  color: #ffffff;
+  border-top: 1px solid #444444;
+  padding-top: 10px;
   margin-top: 20px;
-}
-
-.btn-custom {
-  width: 150px; /* Ancho uniforme para los botones */
-}
-
-/* Estilos específicos para cada botón */
-.btn-warning {
-  background-color: #ffc107; /* Color amarillo para el botón de vaciar carrito */
-  border-color: #ffc107;
-}
-
-.btn-primary {
-  background-color: #007bff; /* Color azul para el botón de seguir comprando */
-  border-color: #007bff;
-}
-
-.btn-success {
-  background-color: #28a745; /* Color verde para el botón de pagar */
-  border-color: #28a745;
-}
-
-/* Cambiar color al pasar el ratón por encima */
-.btn-custom:hover {
-  opacity: 0.5;
 }

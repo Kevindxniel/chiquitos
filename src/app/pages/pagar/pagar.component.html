@@ -1,13 +1,13 @@
 <div class="container mt-5 resumen-pago" style="font-family: 'Courier New', Courier, monospace; ">
   <h1 class="text-center mb-4" >Resumen de Pago</h1>
   <div *ngIf="productos.length > 0" class="productos-info">
-    <h2 >Total: $ {{getTotal()}}</h2>
     <h3>Descripción de Productos:</h3>
     <ul class="list-group">
       <li *ngFor="let producto of productos" class="list-group-item">
         {{producto.nombre}} - $ {{producto.precio}}
       </li>
     </ul>
+    <h2 >Total: $ {{getTotal()}}</h2>
   </div>
   <div *ngIf="productos.length === 0" class="text-center mt-3">
     <p>No hay productos para mostrar.</p>

@@ -81,3 +81,7 @@ h2 {
 .forgot:hover, .Register:hover {
     text-decoration: underline;
 }
+.google-image {
+    width: 15px;
+    height: 15px;
+}

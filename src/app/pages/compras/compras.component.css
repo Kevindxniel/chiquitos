@@ -1,0 +1,37 @@
+.gracias-container {
+    background-color: #000000; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+  }
+  
+  .gracias-container h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  
+  .gracias-container p {
+    font-size: 1.2rem;
+  }
+  
+  .btn-regresar {
+    background-color: rgba(66, 66, 66, 0.1); /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 0.5rem 1.5rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  }
+  
+  .btn-regresar:hover {
+    background-color: #555555; /* Color del botón al pasar el mouse sobre él */
+  }
+
+  .gracias-image {
+    max-width: 100px;
+    height: 100px;
+  }
+  
