@@ -24,9 +24,9 @@
 }
 
 .producto-img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
+  height: 300px; /* Ajusta el alto según sea necesario */
+  width: 100%; /* Ajusta el ancho para que se adapte al contenedor */
+  object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
 }
 
 .card-body h5 {

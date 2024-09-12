@@ -1,102 +1,102 @@
 /* Estilos para el contenedor principal */
 .resumen-pago {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa; /* Fondo gris claro */
-    opacity: 0.5; 
-  }
-  
-  /* Estilo para la lista de productos */
-  .productos-info ul {
-    padding-left: 0;
-    list-style: none;
-  }
-  
-  .productos-info .list-group-item {
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    margin-bottom: 5px;
-    padding: 10px;
-    background-color: #ffffff;
-  }
-  
-  /* Estilo para el botón de pagar */
-  .boton {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 2.5px solid #ffffff;
-    border-radius: 22px;
-    padding: 12px 24px;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .boton:hover {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    transform: scale(1.05);
-  }
-  
-  /* Estilo para el mensaje */
-  .alert-info {
-    font-size: 1.1rem;
-    padding: 15px;
-  }
-  .resumen-pago {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .resumen-pago h1 {
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 10px;
-  }
-  
-  .resumen-pago h2 {
-    color: #ffffff;
-  }
-  
-  .resumen-pago h3 {
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 5px;
-  }
-  
-  .resumen-pago .list-group-item {
-    background-color: #1c1c1c;
-    border: 1px solid #444444;
-    color: #ffffff;
-  }
-  
-  .resumen-pago .list-group {
-    background-color: #333333;
-    border: none;
-  }
-  
-  .resumen-pago .boton {
-    background-color: #ffffff;
-    color: #1c1c1c;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .resumen-pago .boton:hover {
-    background-color: #ffffff;
-  }
-  
-  .resumen-pago .alert {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #444444;
-  }
-  
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Fondo gris claro */
+  opacity: 0.5; 
+}
+
+/* Estilo para la lista de productos */
+.productos-info ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.productos-info .list-group-item {
+  border: 1px solid #ffffff;
+  border-radius: 0.25rem;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* Estilo para el botón de pagar */
+.boton {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid #ffffff;
+  border-radius: 22px;
+  padding: 12px 24px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+/* Estilo para el mensaje */
+.alert-info {
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+.resumen-pago {
+  background-color: #000000;
+  color: #ffffff; /* Letras blancas */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.resumen-pago h1 {
+  border-bottom: 2px solid #ffffff; /* Letras blancas */
+  padding-bottom: 10px;
+}
+
+.resumen-pago h2 {
+  color: #ffffff; /* Letras blancas */
+}
+
+.resumen-pago h3 {
+  border-bottom: 1px solid #ffffff; /* Letras blancas */
+  padding-bottom: 5px;
+}
+
+.resumen-pago .list-group-item {
+  background-color: #1c1c1c;
+  border: 1px solid #ffffff; /* Letras blancas */
+  color: #ffffff; /* Letras blancas */
+}
+
+.resumen-pago .list-group {
+  background-color: #333333;
+  border: none;
+}
+
+.resumen-pago .boton {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #1c1c1c; /* Letras oscuras */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resumen-pago .boton:hover {
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.resumen-pago .alert {
+  background-color: #333333;
+  color: #ffffff; /* Letras blancas */
+  border: 1px solid #444444;
+}

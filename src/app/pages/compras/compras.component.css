@@ -18,7 +18,7 @@
   .btn-regresar {
     background-color: rgba(66, 66, 66, 0.1); /* Color del botón */
     color: #fff; /* Color del texto del botón */
-    border: none; /* Sin borde */
+    border: #fff 1px solid; /* Sin borde */
     padding: 0.5rem 1.5rem; /* Espaciado interno */
     font-size: 1rem; /* Tamaño de fuente del botón */
     border-radius: 4px; /* Bordes redondeados */
