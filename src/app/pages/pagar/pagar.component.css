@@ -1,0 +1,48 @@
+/* Estilos para el contenedor principal */
+.resumen-pago {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Fondo gris claro */
+    opacity: 0.5; 
+  }
+  
+  /* Estilo para la lista de productos */
+  .productos-info ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .productos-info .list-group-item {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  
+  /* Estilo para el botón de pagar */
+  .boton {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2.5px solid #ffffff;
+    border-radius: 22px;
+    padding: 12px 24px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .boton:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+  }
+  
+  /* Estilo para el mensaje */
+  .alert-info {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  

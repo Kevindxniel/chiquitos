@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PaypalService } from '../../services/paypal/paypal.service';
 import { ActivatedRoute } from '@angular/router';
+import { CarritoService } from '../../services/carrito/carrito.service';
+import { Product } from '../../services/productos/productos.service';
 
 @Component({
   selector: 'app-pagar',
@@ -11,17 +13,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './pagar.component.css'
 })
 export class PagarComponent implements OnInit{
-
+  productos: Product[] = [];
   showMessage = false;
   message = '';
 
-  constructor(private paypalService: PaypalService, private route: ActivatedRoute) { }
+  constructor(private carritoService: CarritoService,private paypalService: PaypalService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInito() {
     this.route.queryParams
       .subscribe(params => {
         console.log(params['paymentId']);
       });
+  }
+  ngOnInit(): void {
+    this.productos = this.carritoService.getProductos();
+  }
+  getTotal(): number {
+    return this.carritoService.getTotal();
   }
 
   pay(): void {
