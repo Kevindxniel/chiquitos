@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product, ProductsService } from '../../services/productos/productos.service';
-
+import { CarritoService } from '../../services/carrito/carrito.service';
 
 @Component({
   selector: 'app-gorra',
@@ -12,7 +12,12 @@ export class GorraComponent implements OnInit {
   id: string = '';  
   gorra?: Product;
 
-  constructor(private route: ActivatedRoute, private productosService: ProductsService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private productosService: ProductsService,
+    private carritoService: CarritoService
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -27,5 +32,14 @@ export class GorraComponent implements OnInit {
       }
     });
   }
-}
 
+  addToCarrito(): void {
+    if (this.gorra) {
+      this.carritoService.addToCarrito(this.gorra);
+      this.router.navigate(['/carrito']);
+      console.log('Producto añadido al carrito:', this.gorra);
+    } else {
+      console.log('No hay información del producto para añadir al carrito.');
+    }
+  }
+}

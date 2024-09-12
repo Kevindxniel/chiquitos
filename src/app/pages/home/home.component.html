@@ -43,13 +43,13 @@
 </div>
 
 <!-- Carrusel con Fondo Oscuro -->
-<div class="fondo-oscuro" style="background-image: url(/imagenes/fondo.png); background-size: cover; background-repeat: no-repeat;">
-    <div class="container text-center py-5">
-        <h1 style="color: aliceblue;"></h1>
+<div class="fondo-oscuro" style="background-image: url(/imagenes/fondo.png); background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center; min-height: 75vh;">
+    <div class="container text-center py-3" style="max-width: 1000px;">
+        <h1 style="color: aliceblue; font-size: 1.5rem;"></h1>
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div *ngFor="let gorra of gorras" [class]="gorra.id==1 ? 'carousel-item active' : 'carousel-item'">
-                    <img [src]="gorra.imagen" class="d-block w-100" [alt]="gorra.nombre">
+                <div *ngFor="let gorra of gorras" [class]="gorras.indexOf(gorra) === 0 ? 'carousel-item active' : 'carousel-item'">
+                    <img [src]="gorra.imageUrl" class="d-block" style="width: 50%; margin: 0 auto;">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -63,6 +63,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- Sección LO MÁS DESTACADO -->
 <div class="container text-center mt-4">

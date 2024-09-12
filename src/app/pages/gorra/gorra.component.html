@@ -1,25 +1,31 @@
+<!-- gorra.component.html -->
 <div class="container mt-5">
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <h5 class="card-title" style="font-size: 55px; font-weight: 900; color: rgb(200, 200, 200);">
-          {{gorra?.nombre}}
-        </h5>
+  <div class="row">
+    <!-- Título del producto -->
+    <div class="col-12 text-center mb-4">
+      <h5 class="product-title">
+        {{gorra?.nombre}}
+      </h5>
+    </div>
+
+    <!-- Imagen del producto -->
+    <div class="col-md-6 product-image-container">
+      <img [src]="gorra?.imageUrl" class="product-image" [alt]="gorra?.nombre">
+    </div>
+
+    <!-- Detalles del producto -->
+    <div class="col-md-6 d-flex flex-column justify-content-between product-details">
+      <div>
+        <p class="product-label">Precio:</p>
+        <p class="product-price">$ {{gorra?.precio}}</p>
+        <p class="product-description">Impuesto incluido.</p>
+        <br>
+        <p class="product-label">Descripción:</p>
+        <p class="product-description">{{gorra?.descripcion}}</p>
+        <br>
       </div>
-      <div class="col-md-6 text-center" style="background-image: url('/imagenes/fondoProducto.png'); background-size: cover; background-position: center;">
-        <img [src]="gorra?.imageUrl" class="card-img-top img-fluid" [alt]="gorra?.nombre" style="max-width: 100%; height: auto;">
-      </div>
-      <div class="col-md-6 d-flex flex-column justify-content-between">
-        <div>
-          <p style="font-size: 25px; font-weight: 750;" class="coloLetras">Precio:</p>
-          <p class="card-text" class="coloLetras">$ {{gorra?.precio}}</p>
-          <p class="coloLetras">Impuesto incluido.</p>
-          <br>
-          <p style="font-size: 25px; font-weight: 750;" class="coloLetras">Descripción:</p>
-          <p class="card-text" class="coloLetras">{{gorra?.descripcion}}</p>
-          <br>
-        </div>
-        <a class="btn btn-primary mt-auto" class="boton" style="align-items: center; display: flex; justify-content: center; font-weight: 700; margin-top: auto;">Comprar</a>
-      </div>
+      <a class="btn boton mt-auto" (click)="addToCarrito()">Comprar</a>
     </div>
   </div>
-  
+</div>
+

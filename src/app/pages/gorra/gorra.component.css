@@ -1,26 +1,67 @@
-.containerS {
-    vertical-align: middle; 
-    color: aliceblue;
-
-} 
-.boton{
-    background-color: #000000; 
-    color: rgb(255, 255, 255); 
+/* Estilo para el título del producto */
+.product-title {
+    font-size: 55px;
+    font-weight: 900;
+    color: rgb(200, 200, 200);
+  }
+  
+  /* Estilo para el contenedor de la imagen del producto */
+  .product-image-container {
+    background-image: url('/imagenes/fondoProducto.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo para la imagen del producto */
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Estilo para los detalles del producto */
+  .product-details {
+    padding: 20px;
+  }
+  
+  /* Estilo para las etiquetas de precio y descripción */
+  .product-label {
+    font-size: 25px;
+    font-weight: 750;
+    color: #ffffff;
+  }
+  
+  /* Estilo para el precio del producto */
+  .product-price {
+    font-size: 25px;
+    font-weight: 750;
+    color: #ffffff;
+  }
+  
+  /* Estilo para la descripción del producto */
+  .product-description {
+    color: #ffffff;
+  }
+  
+  /* Estilo para el botón de compra */
+  .boton {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     border: 2.5px solid #ffffff;
     border-radius: 22px;
-    padding: 12px 24px; 
+    padding: 12px 24px;
     font-size: 14px;
-    text-decoration: none; 
-    cursor: pointer;  
+    text-decoration: none;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-
-}
-.boton:hover{
+  }
+  
+  .boton:hover {
     background-color: #ffffff;
-    color: rgb(0, 0, 0); 
-    border: 2.5px solid #ffffff; 
+    color: rgb(0, 0, 0);
+    border: 2.5px solid #ffffff;
     transform: scale(1.05);
-}
-.coloLetras{
-    color: #ffffff;
-}
+  }
+  

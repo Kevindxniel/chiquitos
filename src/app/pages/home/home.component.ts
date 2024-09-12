@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as gorraData from '../../../../public/json/gorraData.json'
 import { Gorra } from '../../utils/gorra';
+import { Product, ProductsService } from '../../services/productos/productos.service';
 
 function randomInt(max: number) {
   return Math.floor(Math.random() * max);
   }
-  
+   
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,12 +16,15 @@ function randomInt(max: number) {
   styleUrl: './home.component.css'
 })
 
-export class HomeComponent {
-  gorras:Gorra[]=(gorraData as any).default;
-  indiceGorra:number=randomInt(3);
-  constructor() { }
+export class HomeComponent implements OnInit {
+  gorras:Product[]= [];
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    console.log(gorraData);
+    this.productsService.getProducts().subscribe((data: Product[]) => {
+      this.gorras = data;
+      console.log(this.gorras.map(gorra => gorra.imageUrl)); // Verifica las URLs
+    });
   }
 }

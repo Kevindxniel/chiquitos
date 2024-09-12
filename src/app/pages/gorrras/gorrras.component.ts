@@ -21,7 +21,7 @@ export class GorrrasComponent implements OnInit {
       console.log(this.gorras.map(gorra => gorra.imageUrl)); // Verifica las URLs
     });
   }
-
+ 
   onClickGorra(gorra: Product): void {
     this.router.navigate(['/gorra', gorra.id]);
   }
