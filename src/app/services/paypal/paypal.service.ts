@@ -145,7 +145,7 @@ export class PaypalService {
       },
       transactions: [{
         amount: {
-          currency: 'DKK',
+          currency: 'USD',
           total: '41.15',
           details: {
             shipping: '11',
@@ -164,14 +164,14 @@ export class PaypalService {
               quantity: '5',
               price: '3',
               sku: '1',
-              currency: 'DKK'
+              currency: 'USD'
             },
             {
               name: 'Sequined Shirt',
               quantity: '1',
               price: '15',
               sku: 'product34',
-              currency: 'DKK'
+              currency: 'USD'
             }
           ],
           shipping_address: {
